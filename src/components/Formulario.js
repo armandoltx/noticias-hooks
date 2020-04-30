@@ -8,6 +8,7 @@ const Formulario = ({guardarCategoria}) => {
     { value: 'general', label: 'General' },
     { value: 'business', label: 'Negocios' },
     { value: 'entertainment', label: 'Entretenimiento' },
+    { value: 'health', label: 'Salud' },
     { value: 'science', label: 'Ciencia' },
     { value: 'sports', label: 'Deporte' },
     { value: 'technology', label: 'Tecnologia' }
@@ -17,8 +18,9 @@ const Formulario = ({guardarCategoria}) => {
   // es lo q retorna el hook en su file. es destructuring no tienen pq tener == nombre, solo las posiciones
   const [ categoria, SelectNoticias ] = useSelect('general', OPCIONES);
   // se le pasan 2 argumentos pq es lo q se define cuando se define en el useSelect file
+  // pasamos el state inicial, queremos que empiece ensenando las noticias generales y luego pasamos las opciones.
 
-  // Submit al form, pasar categoria a aoo.js
+  // Submit al form, pasar categoria a app.js
   const buscarNoticias = (e) => {
     e.preventDefault();
 
