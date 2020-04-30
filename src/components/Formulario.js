@@ -4,8 +4,19 @@ import useSelect from '../hooks/useSelect';
 
 const Formulario = () => {
 
+  const OPCIONES = [ // vienen de la API
+    { value: 'general', label: 'General' },
+    { value: 'business', label: 'Negocios' },
+    { value: 'entertainment', label: 'Entretenimiento' },
+    { value: 'science', label: 'Ciencia' },
+    { value: 'sports', label: 'Deporte' },
+    { value: 'technology', label: 'Tecnologia' }
+  ]
+
   // utilizar custom hook
-  const [ categoria, SelectNoticias ] = useSelect();
+  // es lo q retorna el hook en su file. es destructuring no tienen pq tener == nombre, solo las posiciones
+  const [ categoria, SelectNoticias ] = useSelect('general', OPCIONES);
+  // se le pasan 2 argumentos pq es lo q se define cuando se define en el useSelect file
 
   return (
     <div className={`${styles.buscador} row`}>
