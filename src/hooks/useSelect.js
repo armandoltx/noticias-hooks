@@ -24,7 +24,7 @@ const useSelect = (stateInicial, opciones) => {
     </select>
   )
 
-  // Retornar state, interfaz y la funcion que modifica el state
+  // Retornar state, interfaz
   return [state, SelectNoticias];
 
 };
